@@ -1,0 +1,39 @@
+<!--
+  Generated template for the FirstimePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+    <ion-toolbar>
+      <ion-buttons end >
+        <button ion-button  (tap)="go_to_home()">Skip</button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-navbar>
+</ion-header>
+
+
+ 
+<ion-content class="tutorial-page">
+        <ion-slides pager>
+          <ion-slide *ngFor="let slide of slides">
+            
+            <img [src]="slide.image" class="slide-image"/>
+            <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+            <p [innerHTML]="slide.description"></p>
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/imgs/fonds/one.png" class="slide-image"/>
+            <h2 class="slide-title">C'est parti !</h2>
+            <button ion-button large clear icon-end  (tap)="go_to_home()">
+              Continuer
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+          </ion-slide>
+        </ion-slides>
+
+</ion-content>
